@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Story Maker Toy</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="toy">
+
+        <h1>Story Maker</h1>
+        <p>
+            Click each section to change your story!
+        </p>
+
+        <div class="storyParts">
+
+            <div class="part">
+
+                <p>Who?</p>
+                <input 
+                type="button" 
+                value="The cat" 
+                class="storyButton" 
+                onclick="changePerson(this)">
+
+            </div>
+
+            <div class="part">
+
+                <p>Action?</p>
+                <input 
+                type="button" 
+                value="found" 
+                class="storyButton" 
+                onclick="changeAction(this)">
+
+            </div>
+
+            <div class="part">
+
+                <p>Where?</p>
+                <input 
+                type="button" 
+                value="the forest" 
+                class="storyButton" 
+                onclick="changePlace(this)">
+
+            </div>
+
+            <div class="part">
+
+                <p>What?</p>
+                <input 
+                type="button" 
+                value="a treasure chest" 
+                class="storyButton" 
+                onclick="changeThing(this)">
+
+            </div>
+
+            <div class="part">
+
+                <p>Ending?</p>
+                <input 
+                type="button" 
+                value="and saved the day" 
+                class="storyButton" 
+                onclick="changeEnding(this)">
+
+            </div>
+
+        </div>
+
+        <div class="storyDisplay">
+
+            <p>Your Story:</p>
+            <textarea 
+            id="storyBox" 
+            readonly>
+            "Your story will appear here"
+            </textarea>
+
+        </div>
+
+        <div class="controls">
+
+            <input 
+            type="button" 
+            value="Random Story" 
+            onclick="randomStory()">
+
+            <input type="button" 
+            value="Reset" 
+            onclick="resetStory(
+            document.getElementsByClassName('storyButton')[0],
+            document.getElementsByClassName('storyButton')[1],
+            document.getElementsByClassName('storyButton')[2],
+            document.getElementsByClassName('storyButton')[3],
+            document.getElementsByClassName('storyButton')[4])">
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
